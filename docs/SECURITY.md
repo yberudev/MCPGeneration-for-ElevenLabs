@@ -2,8 +2,8 @@
 
 ## Segredos e logs
 
-- `ELEVENLABS_API_KEY` só é lida do ambiente ou `.env`; não vai para SQLite, argumentos de request logados ou mensagens de sucesso.
-- `.env` e a base de dados estão ignorados pelo Git.
+- `ELEVENLABS_API_KEY` só é lida do ambiente, `.env.local` ou `.env`; não vai para SQLite, argumentos de request logados ou mensagens de sucesso.
+- `.env.local`, `.env` e a base de dados estão ignorados pelo Git.
 - Pino escreve em stderr. Respostas não despejam buffers de mídia.
 - O adapter usa `xi-api-key`, host fixo `api.elevenlabs.io`, sem proxy arbitrário e sem retry automático.
 

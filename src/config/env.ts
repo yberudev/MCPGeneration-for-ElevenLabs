@@ -1,6 +1,10 @@
-import "dotenv/config";
+import { config as loadDotEnv } from "dotenv";
 import { isAbsolute, resolve } from "node:path";
 import * as z from "zod/v4";
+
+// Keep secrets in the ignored, project-local file. Existing process variables
+// still win, and .env remains a fallback for compatibility.
+loadDotEnv({ path: [".env.local", ".env"] });
 
 const bool = z.preprocess(
   (value) => (value === undefined ? "false" : value),

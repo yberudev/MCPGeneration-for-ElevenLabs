@@ -9,6 +9,6 @@
 - Add offline tests for new validation, budget, job, file or protocol behavior.
 - Update `docs/API_MATRIX.md` and `docs/TOOL_REFERENCE.md` when API coverage changes.
 - Do not fabricate credit values, plan access or successful media results.
-- Keep API keys in environment variables or an ignored `.env` file. Never add secrets to logs, fixtures or configuration examples.
+- Keep API keys in environment variables or an ignored `.env.local`/`.env` file. Never add secrets to logs, fixtures or configuration examples.
 - Use explicit FFmpeg argument arrays with `shell: false`; resolve every local input/output path through the media manager.
 - Require explicit consent and confirmation for cloning voices and deleting remote data.

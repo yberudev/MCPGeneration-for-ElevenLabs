@@ -1,8 +1,8 @@
 # Merge this server entry into the existing Codex config.toml; do not replace other settings.
 [mcp_servers.mcpgeneration_elevenlabs]
 command = "node"
-args = ["--env-file=.env", "dist/index.js"]
+args = ["--env-file=.env.local", "dist/index.js"]
 cwd = "/absolute/path/to/MCPGeneration-for-ElevenLabs"
 
-# Build once with `npm run build`. The `.env` file in cwd provides the API key.
+# Build once with `npm run build`. The `.env.local` file in cwd provides the API key.
 # Codex documents command/args/cwd for local stdio MCP servers; keep secrets out of this file.

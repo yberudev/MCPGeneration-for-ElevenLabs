@@ -22,10 +22,10 @@ O ambiente de desenvolvimento usado para esta implementação não tem FFmpeg/FF
 
 ```bash
 npm ci
-cp .env.example .env
+cp .env.example .env.local
 ```
 
-Edite `.env` localmente e defina `ELEVENLABS_API_KEY`. O `.env` é ignorado pelo Git. Por segurança, mantenha `DRY_RUN=true` até estar pronto para autorizar geração paga.
+Edite `.env.local` e defina `ELEVENLABS_API_KEY`. O arquivo é ignorado pelo Git. Por segurança, mantenha `DRY_RUN=true` até estar pronto para autorizar geração paga.
 
 ```bash
 npm run build
@@ -92,7 +92,7 @@ npm test
 npm run check
 ```
 
-`npm run smoke:real` é opt-in e não é incluído em `check`, testes ou CI. Uma chamada de geração real requer argumentos de confirmação no comando e as duas autorizações de execução. Consulte `docs/IMPLEMENTATION_REPORT.md` para os resultados realmente obtidos nesta máquina.
+`npm run smoke:real` é opt-in e não é incluído em `check`, testes ou CI. Sem `--paid`, consulta apenas a conta e os modelos. Uma chamada de geração requer `--paid --confirm-paid-call --allow-unknown-cost`, as duas autorizações de execução e `ELEVENLABS_SMOKE_VOICE_ID`. Consulte `docs/IMPLEMENTATION_REPORT.md` para os resultados realmente obtidos nesta máquina.
 
 ## Fontes oficiais
 

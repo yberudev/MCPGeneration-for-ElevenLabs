@@ -38,7 +38,7 @@ Verificações executadas neste checkout:
 
 ## Configuração e operação
 
-1. `npm ci`, copiar `.env.example` para `.env` e inserir chave localmente.
+1. `npm ci`, copiar `.env.example` para `.env.local` e inserir chave localmente.
 2. Instalar FFmpeg/FFprobe se necessário e executar `npm run doctor`.
 3. `npm run build`; ligar o cliente ao `dist/index.js` por stdio com um caminho absoluto.
 4. Manter dry-run até decidir ativar geração e gates por chamada.
